@@ -17,15 +17,7 @@
   --text-color:black;
   --bg-color:white;
 }
-html::-webkit-scrollbar{
-  width: 0.5rem;
-  background: transparent;
 
-}
-html::-webkit-scrollbar-thumb{
-  border-radius: 5rem;
-  background: var(--text-color);
-}
 section{
   padding: 4rem 0 2rem;
 }
@@ -414,6 +406,7 @@ margin-top: 2rem;
   display: grid;
   align-items: center;
   background: #FFE7CC;
+
 }
 .contact-in{
   width: 80%;
@@ -479,4 +472,56 @@ margin-top: 2rem;
   color: black;
   text-transform: uppercase;
   padding: 10px 0;
+}
+.container2{
+  display: flex;
+
+  justify-content: space-between;
+}
+.container2 .box{
+  position: relative;
+  width: 350px;
+  padding: 40px;
+  background: #fff;
+}
+#accordion{
+  background-color: #FF1E1E;
+  margin: 100px auto;
+  width: 800px;
+}
+#accordion li{
+  list-style: none;
+  width: 100%;
+  margin-bottom: 10px;
+  background: #3C4048;
+  padding:px;
+  border-radius: 4px;
+}
+#accordion li label{
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  color: white;
+}
+#accordion li label span{
+  transform: rotate(90deg);
+  font-size: 22px;
+  color: ;
+}
+#accordion label + input[type="radio"]{
+  display: none;
+}
+#accordion .content{
+  padding: 0 10px;
+  line-height: 26px;
+  max-height: 0;
+  overflow: hidden;
+  transition-duration: 0.5s;
+}
+#accordion label + input[type="radio"]:checked + .content{
+  max-height: 400px;
 }
